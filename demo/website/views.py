@@ -94,3 +94,19 @@ class ApiDesktopsView(BaseView):
         })
         logger.debug('创建服务桌面结果为：%s', api_json)
         return JsonResponse(api_json)
+
+## 进入桌面
+
+class LinkDesktopView(BaseView):
+       def post(self, request):
+        """获取用户实例和用户名"""
+        instance_id = request.POST.get('instance_id')
+        username = request.POST.get('username')
+        # 通过token接口验证用户名和密码
+        api_json = self.api_link(request, instance_id, username)
+        logger.debug('登录获取token结果为：%s', api_json)
+        # 登录成功跳转到配额展示页面
+
+
+
+    

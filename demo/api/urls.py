@@ -9,4 +9,5 @@ urlpatterns = [
     path('products/', views.ProductsView.as_view()),
     path('products_folder/', views.ProductsFolderView.as_view()),
     path('quotas/current-user/', views.QuotasView.as_view()),
+    path("link", views.LinkDesktopView.as_view()),
 ]

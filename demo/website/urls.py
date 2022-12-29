@@ -17,7 +17,7 @@ urlpatterns = [
     # 服务桌面
     path('desktops/', views.DesktopsView.as_view()),
     path('api/desktops/', views.ApiDesktopsView.as_view()),
-
+    
     #
-
+    path("link", views.LinkDesktopView.as_view()),
 ]

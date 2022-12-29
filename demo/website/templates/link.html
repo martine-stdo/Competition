@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="信创大赛demo" />
+        <meta name="author" content="OS-Easy" />
+        <title>连接我的桌面</title>
+    </head>
+    <body>
+        <h1>连接我的桌面</h1>
+        <form action="/website/link/" method="post">
+            {% csrf_token %}
+            <input type="text" name="instance_id" placeholder="instance_id" />
+            <input type="text" name="username" placeholder="username" />
+            <input type="submit" value="连接" />
+        </form>
+    </body>
+</html>
